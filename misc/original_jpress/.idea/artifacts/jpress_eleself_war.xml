@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jpress-eleself:war">
+    <output-path>$PROJECT_DIR$/jpress-eleself/target</output-path>
+    <root id="archive" name="jpress-eyeself-1.0.war">
+      <element id="artifact" artifact-name="jpress-eleself:war exploded" />
+    </root>
+  </artifact>
+</component>

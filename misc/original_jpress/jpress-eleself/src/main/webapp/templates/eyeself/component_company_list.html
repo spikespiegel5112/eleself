@@ -1,0 +1,81 @@
+<#include "_inc/_layout.html"/> 
+<@layout> 
+<!--cont-->
+<div class="main">
+<div class="cont list bus_list">
+
+    <div class="goods_list_top">
+    当前位置：<a href="">首页</a>&nbsp;>&nbsp;<span>企业  </span></a>
+    </div>
+
+    
+    <div class="goods_list_topbox">
+    	<div class="goods_list_topbox_class">
+        	<p><A>类别</A> 
+        	<a href="${CPATH}/company">全部</a>
+        	<a href="${CPATH}/company/factory">生产厂家</a>
+        	<a href="${CPATH}/company/dealer">经销商</a>
+        	<a href="${CPATH}/company/sp">售后服务商</a></p>
+    	</div>
+	</div>
+    
+    <div class="goods_list_tag">
+    	<div class="goods_list_tagl">
+            <a href="${REQUEST.getRequestURI()}?orderby=created" class="active">时间</a>
+            <a href="${REQUEST.getRequestURI()}?orderby=" >热度</a>
+            <a href="" class="">咨询数</a>
+            <a href="" class="">按地区&nbsp;<img src="${CTPATH}/assets/img/bus_03.png"></a>
+    	</div>
+        
+        <div class="goods_list_tagr">
+            <a href="" class=""><</a>
+            <a href="" class="">1</a>
+            <span>2</span>
+            <a href="" class="">></a>
+            <em>到</em>
+            <input type="tel">
+            <em>页</em>
+        </div>
+    </div>
+    <@jp.companyPage pageSize="5">
+    <div class="goods_list_main">
+    	<#list page.getList() as company>
+        <div class="goods_list_mainbox">
+        	<a href="${CPATH}/company/detail/${company.id!}" class="goods_list_mainbox_img">
+        	<img src="${CPATH}${company.metadata('company_thumbnail')!}" width="234" height="201">
+        	</a>
+            <div class="goods_list_mainmsg"><a href="${CPATH}/company/detail/${company.id!}">${company.company!}</a>
+            <p>企业类型：${company.metadata('company_type')!}
+			<br/>主营：${company.metadata('company_main_business ')!}
+			<br/>联系电话：${company.metadata('company_phone')!}
+			<br/>联系人：${company.nickname!}
+			<br/>产品数量：</p>
+			</div>
+			<div class="goods_list_mainbox_c">
+            <a href="" class="goods_list_look"><img src="${CTPATH}/assets/img/bus_10.png"><img src="${CTPATH}/assets/img/bus_11.png"><img src="${CTPATH}/assets/img/bus_12.png"></a>
+            <a href="${CPATH}/company/detail/${company.id!}" class="goods_list_bt">查看企业</a><br/>
+            <a href="" class="goods_list_bt2">收藏企业</a>
+            </div>
+        </div>
+        </#list>
+    
+    </div>
+     <@pagination>
+         <div class="list_page">
+	     <div class="goods_list_tagr">
+	     		<#list pages as pItem>
+		             <a href="${pItem.url!}" >${pItem.text!}</a>
+		        </#list>
+	            <a href="" class="">></a>
+	            <em>共${page.totalPage!}页，到</em>
+	            <input type="tel">
+	            <em>页</em>
+	            <a href="" class="active">确定</a>
+		   </div>
+		   </div>
+   	   </@pagination>
+       </@jp.companyPage>
+</div>
+</div>
+<!--/cont-->
+</@layout>

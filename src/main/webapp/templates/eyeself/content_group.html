@@ -1,0 +1,44 @@
+<#include "_inc/_layout.html"/> 
+<@layout> 
+<!--cont-->
+<div class="main">
+<div class="cont list bus_list">
+
+    <div class="goods_list_top">
+    当前位置：<a href="">首页</a>&nbsp;>&nbsp;<span>学术组织  </span></a>
+    </div>
+	<img src="${CTPATH}/assets/img/xszz_03.png" class="a0_ad" >
+    
+    <div class="a0_l">
+    	<p><em><a href="${CPATH}/group">全国</a></em></p>
+    	<@jp.taxonomys module="group" type="city">
+       	<#list taxonomys as taxonomy>
+       	 <#if taxonomy.parent_id == 0>
+       	 <p><em>地区－${taxonomy.title!}</em>
+       	 <span class="active">
+	       	 <@jp.taxonomys module="group" type="city" parentId=taxonomy.id>
+	       	<#list taxonomys as t>
+	       	 <a href="${t.url!}">${t.title!}</a>
+	       	 </#list>
+	       	</@jp.taxonomys>
+       	 </span></p>
+       	 </#if>
+       	</#list>
+       	</@jp.taxonomys>
+    </div>
+    
+    
+    <div class="a0_r">
+        <div class="per_rbox_top">详情列表</div>
+    <div class="od_box">    
+    	${content.text!}
+    </div>
+    
+    
+    </div>
+    
+   </div>
+</div>
+<!--/cont-->
+
+</@layout>

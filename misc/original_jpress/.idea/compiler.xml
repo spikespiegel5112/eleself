@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jpress-addon-helloworld" />
+        <module name="jpress-cache" />
+        <module name="jpress-commons" />
+        <module name="jpress-eleself" />
+        <module name="jpress-message" />
+        <module name="jpress-model" />
+        <module name="jpress-oauth2" />
+        <module name="jpress-search-api" />
+        <module name="jpress-search-dbsimple" />
+        <module name="jpress-web" />
+        <module name="jpress-web-admin" />
+        <module name="jpress-web-core" />
+        <module name="jpress-web-front" />
+        <module name="jpress-web-template-jblog" />
+        <module name="jpress-web-template-the3" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jpress" target="1.5" />
+      <module name="jpress-addon-helloworld" target="1.8" />
+      <module name="jpress-cache" target="1.8" />
+      <module name="jpress-commons" target="1.8" />
+      <module name="jpress-eleself" target="1.8" />
+      <module name="jpress-message" target="1.8" />
+      <module name="jpress-model" target="1.8" />
+      <module name="jpress-oauth2" target="1.8" />
+      <module name="jpress-search-api" target="1.8" />
+      <module name="jpress-search-dbsimple" target="1.8" />
+      <module name="jpress-web" target="1.8" />
+      <module name="jpress-web-admin" target="1.8" />
+      <module name="jpress-web-core" target="1.8" />
+      <module name="jpress-web-front" target="1.8" />
+      <module name="jpress-web-template-jblog" target="1.8" />
+      <module name="jpress-web-template-the3" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
